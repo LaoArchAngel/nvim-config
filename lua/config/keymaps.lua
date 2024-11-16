@@ -21,7 +21,7 @@ end, { remap = true, desc = "Go forward to 2-character match" })
 
 vim.keymap.set("n", "T", function()
   hop.hint_char2({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = -1 })
-end, { remap = true, "Go back to 2-character match" })
+end, { remap = true, desc = "Go back to 2-character match" })
 
 vim.keymap.set("n", "/", function()
   hop.hint_patterns()
