@@ -7,27 +7,27 @@
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
-vim.keymap.set("n", "f", function()
+vim.keymap.set("", "f", function()
   hop.hint_char2({ direction = directions.AFTER_CURSOR, current_line_only = false })
 end, { remap = true, desc = "Go forward to 2-character match" })
 
-vim.keymap.set("n", "F", function()
+vim.keymap.set("", "F", function()
   hop.hint_char2({ direction = directions.BEFORE_CURSOR, current_line_only = false })
 end, { remap = true, desc = "Go back to 2-character match" })
 
-vim.keymap.set("n", "t", function()
+vim.keymap.set("", "t", function()
   hop.hint_char2({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go forward to 2-character match" })
 
-vim.keymap.set("n", "T", function()
+vim.keymap.set("", "T", function()
   hop.hint_char2({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go back to 2-character match" })
 
-vim.keymap.set("n", "/", function()
+vim.keymap.set("", "/", function()
   hop.hint_patterns()
 end, { remap = true, desc = "Go to pattern" })
 
-vim.keymap.set("n", "gl", function()
+vim.keymap.set("", "gl", function()
   hop.hint_lines_skip_whitespace()
 end, { remap = true, desc = "Go to line" })
 --#endregion
