@@ -8,24 +8,20 @@ local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
 vim.keymap.set("", "f", function()
-  hop.hint_char2({ direction = directions.AFTER_CURSOR, current_line_only = false })
-end, { remap = true, desc = "Go forward to 2-character match" })
+  hop.hint_patterns({ direction = directions.AFTER_CURSOR, current_line_only = false })
+end, { remap = true, desc = "Go forward to pattern match" })
 
 vim.keymap.set("", "F", function()
-  hop.hint_char2({ direction = directions.BEFORE_CURSOR, current_line_only = false })
-end, { remap = true, desc = "Go back to 2-character match" })
+  hop.hint_patterns({ direction = directions.BEFORE_CURSOR, current_line_only = false })
+end, { remap = true, desc = "Go back to pattern match" })
 
 vim.keymap.set("", "t", function()
-  hop.hint_char2({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
+  hop.hint_patterns({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go forward to 2-character match" })
 
 vim.keymap.set("", "T", function()
-  hop.hint_char2({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = -1 })
+  hop.hint_patterns({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go back to 2-character match" })
-
-vim.keymap.set("", "/", function()
-  hop.hint_patterns()
-end, { remap = true, desc = "Go to pattern" })
 
 vim.keymap.set("", "gl", function()
   hop.hint_lines_skip_whitespace()
