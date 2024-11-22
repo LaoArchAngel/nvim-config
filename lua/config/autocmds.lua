@@ -20,12 +20,12 @@ require("neo-tree").setup({
       local modify = vim.fn.fnamemodify
 
       local vals = {
-        ["BASENAME"] = modify(filename, ":r"),
-        ["EXTENSION"] = modify(filename, ":e"),
-        ["FILENAME"] = filename,
         ["PATH (CWD)"] = modify(filepath, ":."),
-        ["PATH (HOME)"] = modify(filepath, ":~"),
+        ["BASENAME"] = modify(filename, ":r"),
         ["PATH"] = filepath,
+        ["FILENAME"] = filename,
+        ["PATH (HOME)"] = modify(filepath, ":~"),
+        ["EXTENSION"] = modify(filename, ":e"),
         ["URI"] = vim.uri_from_fname(filepath),
       }
 
