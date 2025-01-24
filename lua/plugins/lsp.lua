@@ -19,7 +19,7 @@ return {
               "selene.yml",
             }
             
-            if string.find(fname, "AMUMSS") then return nil end
+            if string.find(fname, "AMUMSS") then return end
 
             local root = util.root_pattern(unpack(root_files))(fname)
             if root and root ~= vim.env.HOME then
