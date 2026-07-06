@@ -7,19 +7,19 @@
 local hop = require("hop")
 local directions = require("hop.hint").HintDirection
 
-vim.keymap.set("", "f", function()
+vim.keymap.set("", "<leader>h", function()
   hop.hint_patterns({ direction = directions.AFTER_CURSOR, current_line_only = false })
 end, { remap = true, desc = "Go forward to pattern match" })
 
-vim.keymap.set("", "F", function()
+vim.keymap.set("", "<leader>H", function()
   hop.hint_patterns({ direction = directions.BEFORE_CURSOR, current_line_only = false })
 end, { remap = true, desc = "Go back to pattern match" })
 
-vim.keymap.set("", "t", function()
+vim.keymap.set("", "<leader>t", function()
   hop.hint_patterns({ direction = directions.AFTER_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go forward to pattern match" })
 
-vim.keymap.set("", "T", function()
+vim.keymap.set("", "<leader>T", function()
   hop.hint_patterns({ direction = directions.BEFORE_CURSOR, current_line_only = false, hint_offset = -1 })
 end, { remap = true, desc = "Go back to pattern match" })
 
